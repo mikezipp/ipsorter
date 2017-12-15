@@ -1,3 +1,7 @@
+"""
+THIS SCRIPT SORTS RFC1918 ADDRESSES
+"""
+
 list_of_ip = ["192.168.0.1", "192.168.0.2", "172.16.0.1", "172.30.0.1", "10.0.0.1", "10.255.0.0", "8.8.8.8"]
 
 list_of_192 = ["192", "168"]
@@ -37,7 +41,6 @@ def split_ip():
          list_of_others.append(ip)
          continue
 
-#      break
 
    print "ENDING LOOP\n"
    print "\nRFC1918:"
