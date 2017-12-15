@@ -2,19 +2,27 @@
 THIS SCRIPT SORTS RFC1918 ADDRESSES
 """
 
-list_of_ip = ["192.168.0.1", "192.168.0.2", "172.16.0.1", "172.30.0.1", "10.0.0.1", "10.255.0.0", "8.8.8.8"]
 
+#IMPORT TEXT FILE TO LOCAL LIST
+f = open('ip_address_list.txt', 'r')
+list_of_ip = f.read().splitlines()
+
+
+#RFC1918 IDENTIFIERS
 list_of_192 = ["192", "168"]
 list_of_172 = ["172"]
 list_of_10 = ["10"]
 
+#INITIALIZE SOME LISTS FOR SORTING
 list_of_init = []
 list_of_rfc1918 = []
 list_of_others = []
 
+#DISPLAYS IMPORTED IP'S
 print "\nHere are your ip's:\n%s\n" % (list_of_ip)
 
-def split_ip():
+
+def main():
    print "Here are your octets:"
    for x in list_of_ip:
       x = x.split('.')
@@ -51,7 +59,7 @@ def split_ip():
    for x in list_of_others:
       print x
 
-split_ip()
+main()
 
 
 
